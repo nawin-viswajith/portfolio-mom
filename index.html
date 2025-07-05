@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dr. Santhadevi – Acupuncturist & Yoga Therapist | Chennai</title>
+  <meta name="description" content="Official portfolio of Dr. Santhadevi, Acupuncturist & Certified Yoga Therapist in Porur, Chennai. Book appointments for holistic wellness, women's health, pain relief, and yoga therapy." />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:600,400&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f9fbfa;
+      color: #273b33;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(90deg, #4ac29a 0%, #3dbaa3 100%);
+      color: #fff;
+      padding: 1.5rem 0 1rem 0;
+      box-shadow: 0 2px 8px rgba(76,194,154,0.07);
+    }
+    .container {
+      width: 90%;
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    nav {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+    nav a {
+      color: #eafff6;
+      text-decoration: none;
+      margin: 0 0.8rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #e6c972;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .hero-img {
+      flex: 1 1 220px;
+      max-width: 230px;
+    }
+    .hero-img img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100%;
+      border: 5px solid #4ac29a;
+      box-shadow: 0 4px 24px rgba(60,180,160,0.07);
+      background: #fff;
+    }
+    .hero-details {
+      flex: 2 1 350px;
+    }
+    .hero-details h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-details p {
+      margin: 0.3rem 0;
+      font-size: 1.2rem;
+    }
+    .hero-actions {
+      margin-top: 1.2rem;
+    }
+    .btn {
+      background: #216d54;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-right: 1rem;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(76,194,154,0.13);
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #99d3c0;
+    }
+    h2 {
+      border-left: 6px solid #4ac29a;
+      padding-left: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+      color: #2e7357;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    .qual-list, .special-list, .tech-list, .service-list, .wellness-list {
+      margin: 0;
+      padding: 0 1.5rem;
+      list-style-type: disc;
+    }
+    .award-timeline, .event-list, .pub-list {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 0 0;
+    }
+    .award-timeline th, .award-timeline td, 
+    .event-list th, .event-list td,
+    .pub-list th, .pub-list td {
+      padding: 0.7rem 0.8rem;
+      border-bottom: 1px solid #e8eae6;
+      text-align: left;
+    }
+    .award-timeline th, .event-list th, .pub-list th {
+      background: #f0f8f6;
+      color: #326e57;
+      font-weight: 600;
+    }
+    .award-timeline td {
+      vertical-align: top;
+    }
+    .award-timeline tr td:first-child {
+      font-weight: bold;
+      color: #e6c972;
+    }
+    .testimonial-section {
+      background: #eafff6;
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .testimonial {
+      font-style: italic;
+      color: #5b746c;
+      margin-bottom: 0.7rem;
+      border-left: 3px solid #4ac29a;
+      padding-left: 1.2rem;
+    }
+    .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+    }
+    .gallery img {
+    max-width: 220px;     /* Thumbnail max width */
+    width: 100%;          /* Responsive scaling */
+    height: auto;         /* Keep original aspect ratio */
+    border-radius: 12px;  /* Soft corners */
+    box-shadow: 0 2px 12px rgba(60,180,160,0.07); /* Subtle shadow */
+    background: #f7f7f7;
+    }
+    .contact-section {
+      background: #f0f8f6;
+      padding: 1.8rem 1.2rem;
+      border-radius: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .contact-details {
+      flex: 1 1 300px;
+    }
+    .contact-form {
+      flex: 1 1 250px;
+      min-width: 250px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 0.8rem;
+      border: 1px solid #cce7e1;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      width: 100%;
+      padding: 0.8rem 0;
+      border: none;
+      border-radius: 8px;
+      background: #4ac29a;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 0.3rem;
+    }
+    .contact-form button:hover {
+      background: #338a6d;
+    }
+    .gmap {
+      margin-top: 1.5rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid #eafff6;
+    }
+    footer {
+      background: #326e57;
+      color: #eafff6;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1rem;
+      margin-top: 2rem;
+      border-radius: 2rem 2rem 0 0;
+    }
+    @media (max-width: 800px) {
+      .hero { flex-direction: column; align-items: flex-start; }
+      .gallery { justify-content: center; }
+      .contact-section { flex-direction: column; }
+      .container { padding: 1rem 0; }
+      .hero-img img { margin-bottom: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#awards">Awards</a>
+        <a href="#events">Events</a>
+        <a href="#publications">Media</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="hero">
+        <div class="hero-img">
+          <img src="profile.jpg" alt="Dr. Santhadevi" />
+        </div>
+        <div class="hero-details">
+          <h1>Dr. Santhadevi</h1>
+          <p>Acupuncturist & Certified Yoga Therapist</p>
+          <p><b>Porur, Chennai</b></p>
+          <p>10+ years of experience in Acupuncture<br/>15+ years in Yoga Therapy</p>
+          <div class="hero-actions">
+            <a href="https://wa.me/919566237985" class="btn">WhatsApp</a>
+            <a href="tel:+919566237985" class="btn">Call</a>
+            <a href="#contact" class="btn" style="background:#e6c972;color:#273b33;">Book Appointment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <h2>About</h2>
+        <p>
+          Dr. Santhadevi is an accomplished Acupuncturist and Certified Yoga Therapist with over a decade of experience in acupuncture and 15 years in yoga therapy. Her holistic approach blends Traditional Chinese Medicine, restorative yoga, chakra healing, and lifestyle guidance for effective healing in women’s health, pain management, and mental wellness.
+        </p>
+        <ul class="qual-list">
+          <li><b>MD (Acupuncture)</b></li>
+          <li>Diploma in Yoga and Human Excellence (DYHE)</li>
+          <li>B.Sc (Yoga)</li>
+          <li>M.A. (Sociology)</li>
+          <li>Certifications: Aromatherapy, Cupping, Flower Medicine, more</li>
+        </ul>
+        <ul class="special-list">
+          <li><b>Women’s Health:</b> PCOD, menopause, irregular periods, infertility</li>
+          <li><b>Respiratory & Digestive:</b> Sinusitis, asthma, IBS, kidney stones</li>
+          <li><b>Pain Management:</b> Chronic pain, migraine, headache, BP</li>
+          <li><b>Mental & Cognitive Health:</b> Stress, anxiety, insomnia, ADHD</li>
+          <li><b>Holistic Care:</b> Kids & elderly, therapeutic yoga</li>
+        </ul>
+        <p>
+          <b>Techniques:</b> TCM Acupuncture, Chakra Healing, Restorative Yoga, Pranayama, Dietary Guidance, Counseling, Seed Therapy, Cupping, Acupressure, Mudra, Aromatherapy, Flower Remedy.
+        </p>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section">
+        <h2>Services</h2>
+        <ul class="service-list">
+          <li>Acupuncture Sessions</li>
+          <li>Yoga Therapy (Group & One-on-One)</li>
+          <li>Online Consultations / Tele-therapy</li>
+          <li>Diet & Lifestyle Counseling</li>
+          <li>Health Workshops & Training Bootcamps</li>
+          <li>Therapeutic Diet Foods (e.g., Biotin Laddu)</li>
+          <li>Chakra Healing</li>
+          <li>Cupping Therapy</li>
+          <li>Aroma Therapy & Aroma Candles</li>
+          <li>Flower Remedy</li>
+          <li>Seed Therapy</li>
+          <li>Acupressure</li>
+          <li>Mudra Practice Guidance</li>
+        </ul>
+        <p>
+          <b>Consultation Fee:</b> ₹500 (1 – 1.5 hours). Follow-up fees vary by therapy and will be communicated directly.<br/>
+          <b>All services available in-person and online.</b>
+        </p>
+      </section>
+
+      <!-- AWARDS -->
+      <section id="awards" class="section">
+        <h2>Awards & Honours</h2>
+        <table class="award-timeline">
+          <tr>
+            <th>Year</th>
+            <th>Award</th>
+            <th>Details</th>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>Best Acupuncturist Award — ATAMA</td>
+            <td>Outstanding clinical results in acupuncture.</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>Lifetime Achievement Award — Amudha Surabi Women’s Trust</td>
+            <td>For influential articles on AcuYoga and healing techniques.</td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>Thirukkural Semmal Award — World Thirukural Sadhanai Aalargal Maanadu</td>
+            <td>For the chapter “Panjaboodhangalil Thirukural” in Thirukural Aayvu Nool.</td>
+          </tr>
+          <tr>
+            <td>2024</td>
+            <td>Singappen Award — ATAMA</td>
+            <td>Community service in free acupuncture and wellness initiatives.</td>
+          </tr>
+          <tr>
+            <td>2024</td>
+            <td>Manidha Neyam Kākum Maruthuvar — Ulaga Sivanadiyar Thirukootam</td>
+            <td>Treated 136 patients at a camp of 5,000+; covered in newspapers and TV.</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- EVENTS & BOOTCAMPS -->
+      <section id="events" class="section">
+        <h2>Speaking Engagements & Bootcamps</h2>
+        <table class="event-list">
+          <tr>
+            <th>Event / Venue</th>
+            <th>Role</th>
+            <th>Focus & Audience</th>
+          </tr>
+          <tr>
+            <td>Sristi in Kalaisaaral</td>
+            <td>Chief Guest & Speaker</td>
+            <td>Ārogyā Vāzhviyal (Pathways to Health)</td>
+          </tr>
+          <tr>
+            <td>Nanbargalin Sangamam</td>
+            <td>Organiser & Speaker</td>
+            <td>Free medical-awareness camp on traditional therapies</td>
+          </tr>
+          <tr>
+            <td>Govt. Training Centre for TNPSC</td>
+            <td>Motivational Speaker</td>
+            <td>Stress-management for exam aspirants</td>
+          </tr>
+          <tr>
+            <td>Deepam Lions Club</td>
+            <td>Guest Speaker</td>
+            <td>COVID-19 pandemic relief guidance</td>
+          </tr>
+          <tr>
+            <td>Tiruvannamalai Pengal Inaipu Kuzhu</td>
+            <td>Speaker & Judge</td>
+            <td>Food as Medicine talk & millet-cooking competition</td>
+          </tr>
+          <tr>
+            <td>Tamil Nadu Pengal Inaipu Kuzhu – 29th Annual Conference</td>
+            <td>Chief Guest</td>
+            <td>Women’s health awareness keynote</td>
+          </tr>
+          <tr>
+            <td>Thiruvel Tuition Centre</td>
+            <td>Bootcamp Facilitator</td>
+            <td>Pre-board-exam AcuYoga seminar for 10th & 12th students</td>
+          </tr>
+          <tr>
+            <td>Bodhi Park Coaching Centre</td>
+            <td>Bootcamp Facilitator</td>
+            <td>AcuYoga seminar for NEET aspirants</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- PUBLICATIONS & MEDIA -->
+      <section id="publications" class="section">
+        <h2>Publications & Media</h2>
+        <table class="pub-list">
+          <tr>
+            <th>Year</th>
+            <th>Publication / Platform</th>
+            <th>Contribution</th>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td>Vaanga Pesalaam e-Magazine</td>
+            <td>Profiled for pioneering AcuYoga & women’s health</td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td>Unavu Uzhagam Book</td>
+            <td>Interview: Healing with Acupressure</td>
+          </tr>
+          <tr>
+            <td>2021–22</td>
+            <td>Thanga Mangai Magazine</td>
+            <td>“Thoda Thoda Malarum Viral Nuni Maruthuvam” – wellness columns</td>
+          </tr>
+          <tr>
+            <td>Various</td>
+            <td>ATAMA souvenirs, journals, magazines</td>
+            <td>Regular contributor on acupuncture & wellness</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- COMMUNITY SERVICE -->
+      <section class="section">
+        <h2>Community Service</h2>
+        <p>
+          Dr. Santhadevi has conducted numerous free Acupuncture & AcuYoga camps across Tamil Nadu, collectively treating over 1,000 people. She regularly collaborates with NGOs and women’s groups to provide holistic health sessions to underserved communities.
+        </p>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonial-section">
+        <h2>Testimonials</h2>
+        <div class="testimonial">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, urna vitae cursus cursus, enim sem scelerisque elit, at luctus libero dolor at ipsum.”</div>
+        <div class="testimonial">“Incredible experience! Her approach changed my life for the better. Highly recommended.”</div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="gallery1.jpg" alt="Clinic Practice" />
+          <img src="gallery2.jpg" alt="Event Bootcamp" />
+          <img src="gallery3.jpg" alt="Award Ceremony" />
+          <img src="gallery4.jpg" alt="Workshop" />
+          <!-- Add more as needed -->
+        </div>
+      </section>
+
+      <!-- WELLNESS TIPS -->
+      <section class="section">
+        <h2>Wellness Tips</h2>
+        <ul class="wellness-list">
+          <li>Practice alternate-nostril breathing for 5 minutes daily to reduce anxiety and enhance focus.</li>
+          <li>Add millets and traditional foods to your diet for better digestion and energy.</li>
+          <li>Apply gentle acupressure at the Hegu point (between thumb and index finger) for headache relief.</li>
+          <li>Evening restorative yoga postures help improve sleep quality.</li>
+          <li>Stay hydrated and maintain a regular sleep routine for natural hormone balance.</li>
+        </ul>
+      </section>
+
+      <!-- CONTACT & APPOINTMENT -->
+      <section id="contact" class="contact-section">
+        <div class="contact-details">
+          <h2>Contact & Appointment</h2>
+          <p>
+            <b>WhatsApp / Call:</b> <a href="https://wa.me/919566237985" style="color:#3dbaa3;">+91 95662 37985</a><br/>
+            <b>Email:</b> <a href="mailto:santhadevibr@gmail.com" style="color:#3dbaa3;">santhadevibr@gmail.com</a><br/>
+            <b>Location:</b> Porur, Chennai<br/>
+            <b>Consultation:</b> In-person and Online<br/>
+          </p>
+          <p>
+            <b>Google Maps:</b> <a href="https://maps.app.goo.gl/md4aU9eQm3WZ7qE69" target="_blank" style="color:#3dbaa3;">View Location</a>
+          </p>
+        </div>
+        <form class="contact-form" action="mailto:santhadevibr@gmail.com" method="POST" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required/>
+          <input type="email" name="email" placeholder="Your Email" required/>
+          <input type="text" name="phone" placeholder="Your Phone (optional)"/>
+          <textarea name="message" rows="4" placeholder="Your Message / Appointment Request"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      <div class="gmap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16125.212299181!2d80.1416538446299!3d13.019165120193756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260f67e2ceff1%3A0x86b48cf3d4cee1bb!2sMei%20Acu-Yoga%20for%20Wellness!5e0!3m2!1sen!2sin!4v1751698096365!5m2!1sen!2sin" width="100%" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Dr. Santhadevi. Portfolio prepared July 2025. All content verified by Dr. Santhadevi.
+  </footer>
+</body>
+</html>
