@@ -7,6 +7,7 @@
   <meta name="description" content="Official portfolio of Dr. Santhadevi, Acupuncturist & Certified Yoga Therapist in Porur, Chennai. Book appointments for holistic wellness, women's health, pain relief, and yoga therapy." />
   <link href="https://fonts.googleapis.com/css?family=Montserrat:600,400&display=swap" rel="stylesheet"/>
   <style>
+    /* Base */
     body {
       font-family: 'Montserrat', Arial, sans-serif;
       background: #f9fbfa;
@@ -15,17 +16,30 @@
       padding: 0;
       line-height: 1.6;
     }
+    a { text-decoration: none; }
+    img, iframe {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Header & Nav */
     header {
       background: linear-gradient(90deg, #4ac29a 0%, #3dbaa3 100%);
       color: #fff;
-      padding: 1.5rem 0 1rem 0;
+      padding: 1.5rem 0 1rem;
       box-shadow: 0 2px 8px rgba(76,194,154,0.07);
     }
     .container {
       width: 90%;
       max-width: 1050px;
       margin: 0 auto;
-      padding: 2rem 0;
+      padding: 0 1rem;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: #eafff6;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
     }
     nav {
       text-align: right;
@@ -33,7 +47,6 @@
     }
     nav a {
       color: #eafff6;
-      text-decoration: none;
       margin: 0 0.8rem;
       font-weight: 600;
       transition: color 0.2s;
@@ -41,6 +54,7 @@
     nav a:hover {
       color: #e6c972;
     }
+    /* Hero */
     .hero {
       display: flex;
       align-items: center;
@@ -52,10 +66,8 @@
       max-width: 230px;
     }
     .hero-img img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 100%;
+      width: 200px; height: 200px;
+      object-fit: cover; border-radius: 100%;
       border: 5px solid #4ac29a;
       box-shadow: 0 4px 24px rgba(60,180,160,0.07);
       background: #fff;
@@ -83,7 +95,6 @@
       font-size: 1rem;
       font-weight: 600;
       margin-right: 1rem;
-      text-decoration: none;
       box-shadow: 0 2px 8px rgba(76,194,154,0.13);
       transition: background 0.2s;
       display: inline-block;
@@ -91,6 +102,7 @@
     .btn:hover {
       background: #99d3c0;
     }
+    /* Sections */
     h2 {
       border-left: 6px solid #4ac29a;
       padding-left: 1rem;
@@ -102,39 +114,31 @@
     }
     .section {
       margin-bottom: 2.5rem;
-      text-align: justify;
-      text-justify: inter-word;  /* improves justification in most browsers */
-
     }
-    .qual-list, .special-list, .tech-list, .service-list, .wellness-list {
-      margin: 0;
-      padding: 0 1.5rem;
-      list-style-type: disc;
-    }
+    ul { margin: 0; padding-left: 1.5rem; }
+    /* Tables */
     .award-timeline, .event-list, .pub-list {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0 0 0;
+      margin: 1rem 0;
+      display: block;
+      overflow-x: auto;
     }
-    .award-timeline th, .award-timeline td, 
-    .event-list th, .event-list td,
-    .pub-list th, .pub-list td {
+    th, td {
       padding: 0.7rem 0.8rem;
       border-bottom: 1px solid #e8eae6;
       text-align: left;
     }
-    .award-timeline th, .event-list th, .pub-list th {
+    th {
       background: #f0f8f6;
       color: #326e57;
       font-weight: 600;
     }
-    .award-timeline td {
-      vertical-align: top;
-    }
-    .award-timeline tr td:first-child {
+    tr td:first-child {
       font-weight: bold;
       color: #e6c972;
     }
+    /* Testimonials */
     .healingjourneys-section {
       background: #eafff6;
       border-radius: 1rem;
@@ -148,23 +152,23 @@
       border-left: 3px solid #4ac29a;
       padding-left: 1.2rem;
       text-align: justify;
-      text-justify: inter-word;  /* improves justification in most browsers */
-
+      text-justify: inter-word;
     }
+    /* Gallery */
     .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
     }
     .gallery img {
-    max-width: 220px;     /* Thumbnail max width */
-    width: 100%;          /* Responsive scaling */
-    height: auto;         /* Keep original aspect ratio */
-    border-radius: 12px;  /* Soft corners */
-    box-shadow: 0 2px 12px rgba(60,180,160,0.07); /* Subtle shadow */
-    background: #f7f7f7;
+      max-width: 220px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(60,180,160,0.07);
+      background: #f7f7f7;
     }
+    /* Contact */
     .contact-section {
       background: #f0f8f6;
       padding: 1.8rem 1.2rem;
@@ -172,7 +176,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 2rem;
-      align-items: center;
+      align-items: flex-start;
     }
     .contact-details {
       flex: 1 1 300px;
@@ -210,6 +214,27 @@
       overflow: hidden;
       border: 2px solid #eafff6;
     }
+    .map-wrapper {
+      margin-top: 1.5rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid #eafff6;
+      position: relative;
+      width: 100%;
+      /* 16:9 aspect ratio = 56.25% padding-bottom */
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+  }
+  .map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+    /* Footer */
     footer {
       background: #326e57;
       color: #eafff6;
@@ -219,18 +244,41 @@
       margin-top: 2rem;
       border-radius: 2rem 2rem 0 0;
     }
+    /* Tablet */
     @media (max-width: 800px) {
+      .container { width: 95%; }
+      .menu-toggle { display: block; }
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav.open {
+        display: flex;
+      }
+      nav a { margin: 0.3rem 0; }
       .hero { flex-direction: column; align-items: flex-start; }
       .gallery { justify-content: center; }
       .contact-section { flex-direction: column; }
-      .container { padding: 1rem 0; }
-      .hero-img img { margin-bottom: 1rem; }
+    }
+    /* Mobile */
+    @media (max-width: 480px) {
+      header { padding: 1rem 0 0.5rem; }
+      .hero-details h1 { font-size: 2rem; }
+      .hero-details p { font-size: 1rem; }
+      .hero-actions .btn {
+        padding: 0.6rem 1.5rem;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
+      <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('open')">
+        &#9776; Menu
+      </div>
       <nav>
         <a href="#about">About</a>
         <a href="#services">Services</a>
@@ -238,26 +286,30 @@
         <a href="#events">Events</a>
         <a href="#publications">Media</a>
         <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="hero">
         <div class="hero-img">
-          <img src="profile.jpg" alt="Dr. Santhadevi" />
+          <img src="profile.jpg" alt="Dr. Santhadevi portrait" />
         </div>
         <div class="hero-details">
           <h1>Dr. Santhadevi</h1>
           <p>Acupuncturist & Certified Yoga Therapist</p>
-          <p><b>Porur, Chennai</b></p>
-          <p>10+ years of experience in Acupuncture<br/>15+ years in Yoga Therapy</p>
+          <p><strong>Porur, Chennai</strong></p>
+          <p>10+ years in Acupuncture & 15+ years in Yoga Therapy</p>
           <div class="hero-actions">
             <a href="https://wa.me/919566237985" class="btn">WhatsApp</a>
             <a href="tel:+919566237985" class="btn">Call</a>
-            <a href="#contact" class="btn" style="background:#e6c972;color:#273b33;">Book Appointment</a>
+            <a href="#contact" class="btn" style="background:#e6c972;color:#273b33;">
+              Book Appointment
+            </a>
           </div>
         </div>
       </div>
     </div>
   </header>
+
   <main>
     <div class="container">
       <!-- ABOUT -->
@@ -458,7 +510,7 @@
           “Needling, seed therapy, and diet correction are her signature techniques—they truly are the crown jewels of her practice.”<br/>
           “Mudras and acupressure points for immunity and pain relief have been immensely helpful for my child’s fevers and body aches. And the murunga keerai soup recipe you shared tasted wonderful.”
         </div>
-      </section>
+      </section>  
 
       <!-- GALLERY -->
       <section id="gallery" class="section">
@@ -506,13 +558,14 @@
           <button type="submit">Send Message</button>
         </form>
       </section>
-      <div class="gmap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16125.212299181!2d80.1416538446299!3d13.019165120193756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260f67e2ceff1%3A0x86b48cf3d4cee1bb!2sMei%20Acu-Yoga%20for%20Wellness!5e0!3m2!1sen!2sin!4v1751698096365!5m2!1sen!2sin" width="100%" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16125.212299181!2d80.1416538446299!3d13.019165120193756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260f67e2ceff1%3A0x86b48cf3d4cee1bb!2sMei%20Acu-Yoga%20for%20Wellness!5e0!3m2!1sen!2sin!4v1751698096365!5m2!1sen!2sin" width="100%" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </main>
+
   <footer>
-    &copy; 2025 Dr. Santhadevi. Portfolio prepared July 2025. All content verified by Dr. Santhadevi.
+    &copy; 2025 Dr. Santhadevi. Portfolio prepared July 2025.
   </footer>
 </body>
 </html>
